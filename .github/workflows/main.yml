@@ -30,8 +30,11 @@ jobs:
       - name: Unit test
         run: ng test
         
-      - name: Update WebDriver
-        run: npm run webdriver-update
+      - name: Start Selenium Server
+        run: webdriver-manager start
+        
+      - name: Install Protractor and webdriver-manager
+        run: npm install --save-dev protractor webdriver-manager
       
       - name: E2E test
         run: ng e2e
