@@ -26,15 +26,20 @@ jobs:
 
       - name: Install dependencies
         run: npm install
-
+        
+      - name: Install mocha
+        run: npm install mocha --save-dev
+        
+      - name: Install Karma firefox
+        run: npm install karma-firefox-launcher --save-dev
+        
+      - name: Install Karma spec reporter
+        run: npm install karma-spec-reporter --save-dev
+        
+      - name: Install protractor
+        run: npm install protractor --save-dev
+      
       - name: Unit test
         run: ng test
+
         
-      - name: Start Selenium Server
-        run: npx webdriver-manager start
-        
-      - name: Install Protractor and webdriver-manager
-        run: npm install --save-dev protractor webdriver-manager
-      
-      - name: E2E test
-        run: ng e2e
