@@ -31,7 +31,7 @@ jobs:
         run: ng test
         
       - name: Start Selenium Server
-        run: webdriver-manager start
+        run: npx webdriver-manager start
         
       - name: Install Protractor and webdriver-manager
         run: npm install --save-dev protractor webdriver-manager
