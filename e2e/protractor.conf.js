@@ -3,7 +3,6 @@
 // https://github.com/angular/protractor/blob/master/lib/config.ts
 
 const { SpecReporter } = require('jasmine-spec-reporter');
-const { firefox } = require('selenium-webdriver/firefox');
 
 /**
  * @type { import("protractor").Config }
@@ -14,10 +13,7 @@ exports.config = {
     './src/**/*.e2e-spec.ts'
   ],
   capabilities: {
-    browserName: 'firefox',
-    'moz:firefoxOptions': {
-      args: ['--headless', '--disable-gpu']
-    }
+    browserName: 'chrome'
   },
   directConnect: true,
   baseUrl: 'http://localhost:4200/',
