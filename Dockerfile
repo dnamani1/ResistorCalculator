@@ -17,8 +17,8 @@ RUN npm install
 COPY dist/ .
 
 # Expose port 4200 to allow external access
-EXPOSE 8000
+EXPOSE 4200
 
 # Start the web server when the container launches
-CMD ["http-server", "-p", "8000"]
+CMD ["http-server", "-p", "4200"]
 
