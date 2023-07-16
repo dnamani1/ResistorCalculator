@@ -1,0 +1,48 @@
+label {
+  display: inline-block;
+  width: 80px;
+}
+
+select {
+  margin-bottom: 10px;
+}
+
+h3 {
+  margin-top: 20px;
+}
+
+.resistance-container {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.resistance-title {
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+
+.band-selection-container,
+.debug-container {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.label-container {
+  width: 100px;
+}
+
+.dropdown-container {
+  margin-left: 10px;
+}
+

@@ -1,0 +1,49 @@
+<div class="band-selection-container">
+        <div>
+                <h2>Resistance: {{ calculateResistance() }}</h2>
+        </div>
+        <p>Select bands</p>
+        <div class="container">
+                <label>Digits:</label>
+
+                <div class="dropdown-container">
+                        <select [(ngModel)]="selectedColors[0]">
+                                <option *ngFor="let color of colors" [value]="color">{{ color }}</option>
+                        </select>
+
+                        <select [(ngModel)]="selectedColors[1]">
+                                <option *ngFor="let color of colors" [value]="color">{{ color }}</option>
+                        </select>
+
+                        <select [(ngModel)]="selectedColors[2]">
+                                <option *ngFor="let color of colors" [value]="color">{{ color }}</option>
+                        </select>
+                </div>
+
+                <div class="dropdown-container">
+                        <label>Multiplier:</label>
+                        <div class="dropdown-container">
+                                <select [(ngModel)]="selectedColors[3]">
+                                        <option *ngFor="let resistor of resistorValues" [value]="resistor.multiplier">{{ resistor.multiplier }}</option>
+                                </select>
+                        </div>
+                </div>
+
+                <div class="dropdown-container">
+                        <label>Tolerance:</label>
+                        <div class="dropdown-container">
+                                <select [(ngModel)]="selectedColors[4]">
+                                        <option *ngFor="let resistor of resistorValues" [value]="resistor.tolerance">{{ resistor.tolerance }}</option>
+                          </select>
+                        </div>
+                </div>
+        </div>
+</div>
+
+<div class="debug-container">
+  <h3>Debug:</h3>
+  <p>Digits: {{ selectedColors.slice(0, 3) }}</p>
+  <p>Multiplier: {{ getMultiplierLabel(selectedColors[3]) }}</p>
+  <p>Tolerance: {{ getToleranceLabel(selectedColors[4]) }}</p>
+</div>
+
