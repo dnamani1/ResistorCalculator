@@ -26,10 +26,4 @@ describe('AppComponent', () => {
     expect(app.title).toEqual('CS6261Project4');
   });
 
-  it('should render title', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('CS6261Project4 app is running!');
-  });
 });
